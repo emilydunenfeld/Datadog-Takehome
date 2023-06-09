@@ -35,7 +35,7 @@ metrics.flush();
 
 To run use the command with your site and API key. 
 ```
-DATADOG_API_HOST=“<SITE>” DATADOG_API_KEY=“<API_KEY>" DEBUG=metrics node random_metric.js 
+DATADOG_API_HOST="<SITE>" DATADOG_API_KEY="<API_KEY>" DEBUG=metrics node random_metric.js 
 ```
 
 This will send a metric called 'my_number' to Datadog with a random number from 1 to 1000.
