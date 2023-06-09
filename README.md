@@ -4,7 +4,7 @@
 datadog-metrics is a useful library for sending metrics to Datadog via Datadog’s HTTP API. 
 
 ## Benefits
-One benefit to using datadog-metrics is that you do not need to set up the Datadog Agent. It also solves the problem of slowed down apps performance when using the HTTP API by __. 
+This library is easy to use, one benefit is that you do not need to set up the Datadog Agent to use datadog-metrics. It also solves the problem of slowed down apps performance when using the HTTP API by locally buffering the metrics and regularly sending them to Datadog in batches. By doing so, it ensures that the performance of your app remains unaffected while still providing you with the benefits of utilizing Datadog's powerful metric collection capabilities.
 
 ## Setting Up
 #### Pre-Requisites
@@ -20,7 +20,7 @@ npm install datadog-metrics --save
 ## Random Metric
 Create a javascript file and name it random_metric.js
 
-```
+```js
 const metrics = require('datadog-metrics');
 
 function getRandomNumber(min, max) {
@@ -48,7 +48,30 @@ If you would like to see your metric in Datadog navigate to <a href="https://doc
 <img src="/random.png" alt="random" width="800">
   
 ## Adding On
+```js
+const metrics = require('datadog-metrics');
 
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+metrics.init({ host: 'myhost', prefix: 'myprefix.', defaultTags: ['category:random']});
+
+function sendRandom() {
+  var randomNumber = getRandomNumber(1, 1000);
+  metrics.gauge('my_number', randomNumber);
+}
+
+setInterval(sendRandom, 15000);
+```
+The number is now being updated every 15 seconds to a new random value.
+Use init to provide more more options. In this case we set the host, prefix, and tags. 
+
+The console output should look like this.
+<img src="/terminal2.png" alt="terminal" width="800">
+
+Your metric should look like this
+<img src="/random2.png" alt="random" width="800">
 
 ## Best practices/Format
 
