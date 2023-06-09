@@ -1,16 +1,23 @@
 # datadog-metrics
+| API             | Syntax                                         | Description                            |
+| --------------- | ---------------------------------------------- | -------------------------------------- |
+| Initialization  |<table>  <thead>  <tr>  <th>Option</th>  <th>Description</th>  </tr>  </thead>  <tbody>  <tr> <td><code>Host</code></td>  <td>Host Description</td>  <tr> <td><code>Host</code></td>  <td>Host Description</td> <tr> <td><code>Host</code></td>  <td>Host Description</td> <tr> <td><code>Host</code></td>  <td>Host Description</td> <tr> <td><code>Host</code></td>  <td>Host Description</td> <tr> <td><code>Host</code></td>  <td>Host Description</td> <tr> <td><code>Host</code></td>  <td>Host Description</td> <tr> <td><code>Host</code></td>  <td>Host Description</td> <tr> <td><code>Host</code></td>  <td>Host Description</td> <tr> <td><code>Host</code></td>  <td>Host Description</td>  </tbody>  </table>      |                                        |
+| Gauges          |                                                |                                        |
+| Counters        |                                                |                                        |
+| Histograms      |                                                |                                        |
+| Distributions   |                                                |                                        |
+| Flushing        |                                                |                                        |
 
 ## Format
 
-| API | Description |
-| --- | --- |
-| Initialization | Show file differences that haven't been staged |
-| Gauges | Show file differences that haven't been staged |
-| Counters | Show file differences that haven't been staged |
-| Histograms | Show file differences that haven't been staged |
-| Distributions | Show file differences that haven't been staged |
-| Flushing | Show file differences that haven't been staged |
-
+| API             | Syntax                                         | Description                            |
+| --------------- | ---------------------------------------------- | -------------------------------------- |
+| Initialization  |                                                |                                        |
+| Gauges          |                                                |                                        |
+| Counters        |                                                |                                        |
+| Histograms      |                                                |                                        |
+| Distributions   |                                                |                                        |
+| Flushing        |                                                |                                        |
 
 ## Overview
 datadog-metrics is a useful library for sending metrics to Datadog via Datadog’s HTTP API. 
