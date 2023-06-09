@@ -59,9 +59,9 @@ If you would like to see your metric in Datadog navigate to <a href="https://doc
 | Flushing        |`metrics.flush([onSuccess[, onError]])`|Flush sends metrics when `flushIntervalSeconds` is set to 0. `onSuccess` and `onError` are optional.|
 
 ## Adding Functionality - Random Metric
-In our random metric example we used `metrics.gauge` to record the value of our metric and `metrics.flush` to ensure the pending metrics are set before the process is terminated.
+In our previous random metric example we used `metrics.gauge` to record the value of our metric and `metrics.flush` to ensure the pending metrics are sent before the process terminates.
 
-We can add more functionality, as well.
+Let's enhance our example by adding more functionality.
 
 ```js
 const metrics = require('datadog-metrics');
@@ -79,7 +79,7 @@ function sendRandom() {
 
 setInterval(sendRandom, 15000);
 ```
-The number is now being updated every 15 seconds to a new random value. We use init to set the host, prefix, and tags. 
+The metric value is now being updated to a random number every 15 seconds. We use `metrics-init` to set the host, prefix, and tags. 
 
 The console output should look like this.
 <img src="/terminal2.png" alt="terminal" width="800">
@@ -90,3 +90,4 @@ Your metric should look like this.
 ## Adding Functionality - Random Metric
 
 ## Summary
+You have now learned how to use `datadog-metrics` to send metrics to Datadog and explored its various capabilities. For more information check out the <a href="https://github.com/dbader/node-datadog-metrics">library</a> and <a href="https://docs.datadoghq.com/">datadog docs</a>.
