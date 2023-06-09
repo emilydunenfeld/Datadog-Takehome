@@ -17,7 +17,7 @@ Install datadog-metrics using npm </br>
 npm install datadog-metrics --save
 ```
 
-## Random Metric
+## Example - Random Metric
 Create a javascript file and name it random_metric.js
 
 ```js
@@ -47,7 +47,7 @@ The console output should look like this. In this case 'my_number' has a value o
 If you would like to see your metric in Datadog navigate to <a href="https://docs.datadoghq.com/metrics/explorer/">metrics explorer</a> and select 'my_number' for your metric. 
 <img src="/random.png" alt="random" width="800">
   
-## Adding On
+## Adding Functionality - Random Metric
 ```js
 const metrics = require('datadog-metrics');
 
