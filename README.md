@@ -87,7 +87,5 @@ The console output should look like this.
 Your metric should look like this.
 <img src="/random2.png" alt="random" width="800">
 
-## Adding Functionality - Random Metric
-
 ## Summary
 You have now learned how to use `datadog-metrics` to send metrics to Datadog and explored its various capabilities. For more information check out the <a href="https://github.com/dbader/node-datadog-metrics">library</a> and <a href="https://docs.datadoghq.com/">datadog docs</a>.
