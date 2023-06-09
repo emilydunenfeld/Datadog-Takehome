@@ -56,7 +56,7 @@ If you would like to see your metric in Datadog navigate to <a href="https://doc
 | Counters        |`metrics.increment(key[, value[, tags[, timestamp]]])`|Increase the value of your metric. The default of `value` is 1. `value`, `tags`, and `timestamp` are optional.|
 | Histograms      |<details> <summary> `metrics.histogram(key, value[, tags[, timestamp[, options]]])` </summary> </br> <table>  <thead>  <tr>  <th>Option</th>  <th>Value</th>  </tr>  </thead>  <tbody>  <tr> <td><code>aggregates</code></td>  <td>Can be 'max', 'min', 'sum', 'avg', 'median', or 'count'.</td>  <tr> <td><code>percentiles</code></td>  <td>Can be any decimal between 0 and 1.</td></tbody>  </table> </details>|Samples a histogram value. Expand to see available options. `tags`, `timestamp`, and `options` are optional.|
 | Distributions   |`metrics.distribution(key, value[, tags[, timestamp]])`|Samples a distribution value. `tags` and `timestamp` are optional.|
-| Flushing        |`metrics.flush([onSuccess[, onError]])`|Flush sends metrics when `flushIntervalSeconds` is set to 0. `onSuccess` and `onError` are optional.|
+| Flushing        |`metrics.flush([onSuccess[, onError]])`|Use flush sends metrics when `flushIntervalSeconds` is set to 0. `onSuccess` and `onError` are optional.|
 
 ## Adding Functionality - Random Metric
 In our previous random metric example we used `metrics.gauge` to record the value of our metric and `metrics.flush` to ensure the pending metrics are sent before the process terminates.
