@@ -12,7 +12,7 @@ One advantage is that you do not need to set up the Datadog Agent to use `datado
 2. Gather your <a href="https://docs.datadoghq.com/account_management/api-app-keys/">API key</a>.
 
 #### Install
-Install datadog-metrics using npm </br>
+Install `datadog-metrics` using npm </br>
 ```bash
 npm install datadog-metrics --save
 ```
