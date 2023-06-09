@@ -18,7 +18,7 @@ npm install datadog-metrics --save
 ```
 
 ## Example - Random Metric
-Before diving into the availible functionality of `datadog-metrics` let's get started with a quick example. Create a JavaScript file and named random_metric.js and add the following code.
+Before diving into the available functionality of datadog-metrics, let's get started with a quick example. Create a JavaScript file named random_metric.js and add the following code.
 
 ```js
 const metrics = require('datadog-metrics');
