@@ -59,7 +59,7 @@ If you would like to see your metric in Datadog navigate to <a href="https://doc
 | Flushing        |`metrics.flush([onSuccess[, onError]])`|Use flush sends metrics when `flushIntervalSeconds` is set to 0. `onSuccess` and `onError` are optional.|
 
 ## Adding Functionality - Random Metric
-In our previous random metric example we used `metrics.gauge` to record the value of our metric and `metrics.flush` to ensure the pending metrics are sent before the process terminates.
+In our previous random metric example, we used `metrics.gauge` to record the value of our metric and `metrics.flush` to ensure the pending metrics are sent before the process terminates.
 
 Let's enhance our example by adding more functionality.
 
