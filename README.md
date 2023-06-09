@@ -1,5 +1,17 @@
 # datadog-metrics
 
+## Format
+
+| API | Description |
+| --- | --- |
+| Initialization | Show file differences that haven't been staged |
+| Gauges | Show file differences that haven't been staged |
+| Counters | Show file differences that haven't been staged |
+| Histograms | Show file differences that haven't been staged |
+| Distributions | Show file differences that haven't been staged |
+| Flushing | Show file differences that haven't been staged |
+
+
 ## Overview
 datadog-metrics is a useful library for sending metrics to Datadog via Datadog’s HTTP API. 
 
