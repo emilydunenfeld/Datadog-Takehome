@@ -78,13 +78,12 @@ function sendRandom() {
 
 setInterval(sendRandom, 15000);
 ```
-The number is now being updated every 15 seconds to a new random value.
-Use init to provide more more options. In this case we set the host, prefix, and tags. 
+The number is now being updated every 15 seconds to a new random value. We use init to set the host, prefix, and tags. 
 
 The console output should look like this.
 <img src="/terminal2.png" alt="terminal" width="800">
 
-Your metric should look like this
+Your metric should look like this.
 <img src="/random2.png" alt="random" width="800">
 
 ## Adding Functionality - Random Metric
