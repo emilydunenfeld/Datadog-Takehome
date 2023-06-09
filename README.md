@@ -18,16 +18,34 @@ npm install datadog-metrics --save
 ```
 
 ## Workflow - Random Metric
-
 Create a javascript file and name it random_metric.js
 
+```
+const metrics = require('datadog-metrics');
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var randomNumber = getRandomNumber(1, 1000);
+
+metrics.gauge('my_number', randomNumber);
+metrics.flush();
+```
+
+To run use the command 
+```
 DATADOG_API_HOST=“<SITE>” DATADOG_API_KEY=“<API_KEY>" DEBUG=metrics node random_metric.js 
+```
+With your site and API key. 
 
-*screenshot of terminal*
+This will send a metric called 'my_number' to Datadog with a random number from 1 to 1000.
 
-*screenshot of metric*
+The console output should look like this. In this case 'my_number' has a value of 895.
+<img src="screenshots/terminal.png" alt="terminal">
 
-troubleshooting
+If you would like to see your metric in Datadog navigate to <a href="https://docs.datadoghq.com/metrics/explorer/">metrics explorer</a> and select 'my_number' for your metric. 
+<img src="screenshots/random.png" alt="random">
   
 ## Workflow - 
 
